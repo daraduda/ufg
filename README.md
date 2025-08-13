@@ -4,13 +4,12 @@ A WCF-based file management solution for ASP.NET Web applications with antivirus
 
 ## Overview
 
-UnifiedFileGateway is a prototype solution designed to address file management challenges across multiple ASP.NET Web application instances (Local, Central, and Service portals) that share the same codebase but differ in configuration. The solution provides a unified interface for file operations with integrated antivirus scanning and user notification capabilities.
+UnifiedFileGateway is a prototype solution designed to address file management challenges across multiple ASP.NET Web application instances (Central Portal) that share the same codebase but differ in configuration. The solution provides a unified interface for file operations with integrated antivirus scanning and user notification capabilities.
 
 ## Problem Statement
 
-The system manages files across two ASP.NET Web application instances:
-1. **Central Portal** - Centralized file management with Citrix Farm integration
-2. **Service Portal** - External service access
+The system manages files across one ASP.NET Web application instance:
+1. **Central Portal** - Centralized file management
 
 Key challenges addressed:
 - **File Processing**: Special folders like `CentralStorage` (processed by external antivirus)
@@ -36,6 +35,8 @@ The solution implements **client-side polling** for antivirus completion notific
 - **SOAP Protocol** - For external client compatibility
 - **MTOM (Message Transmission Optimization Mechanism)** - For efficient large file streaming
 - **Kestrel** - Web server for hosting the WCF service
+- **React** - Frontend framework for the Web UI
+- **Tailwind CSS** - Utility-first CSS framework for styling
 
 ## Project Structure
 
@@ -331,7 +332,7 @@ Potential improvements for production use:
 
 ## License
 
-This is a prototype solution. Please ensure proper licensing for production use.
+This project is licensed under the Apache License, Version 2.0. See the [LICENSE](LICENSE) file for details.
 
 ## Support
 
