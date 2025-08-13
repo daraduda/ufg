@@ -8,13 +8,12 @@ UnifiedFileGateway is a prototype solution designed to address file management c
 
 ## Problem Statement
 
-The system manages files across three ASP.NET Web application instances:
-1. **Local Portal** - Local file operations
-2. **Central Portal** - Centralized file management with Citrix Farm integration
-3. **Service Portal** - External service access
+The system manages files across two ASP.NET Web application instances:
+1. **Central Portal** - Centralized file management with Citrix Farm integration
+2. **Service Portal** - External service access
 
 Key challenges addressed:
-- **File Processing**: Special folders like `TP-Skizzen` (processed by `Fachprozess`) and `CentralStorage` (processed by external antivirus)
+- **File Processing**: Special folders like `CentralStorage` (processed by external antivirus)
 - **User Notification**: Notifying users when files uploaded to `CentralStorage` have been processed by external antivirus
 - **Cross-Platform Communication**: Enabling communication between different application instances
 - **Large File Handling**: Supporting efficient upload/download of large files
@@ -31,7 +30,7 @@ The solution implements **client-side polling** for antivirus completion notific
 
 ### Technology Stack
 
-- **.NET 8.0** - Modern .NET framework
+- **.NET 8.0** - .NET framework
 - **CoreWCF** - WCF implementation for .NET Core/8.0
 - **System.ServiceModel** - Standard WCF client library
 - **SOAP Protocol** - For external client compatibility
@@ -174,10 +173,6 @@ UnifiedFileGateway/
    ```
    http://localhost:3000
    ```
-
-5. **Alternative: Use provided scripts**
-   - Windows: `start-webui.bat`
-   - PowerShell: `start-webui.ps1`
 
 **Note**: Make sure the WCF service is running before using the Web UI.
 
