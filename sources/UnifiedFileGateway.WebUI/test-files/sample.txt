@@ -1,0 +1,14 @@
+This is a test file for demonstrating the functionality of the Unified File Gateway Web UI.
+
+Functions for testing:
+1. File upload via drag & drop
+2. Upload progress display
+3. Antivirus scanning
+4. Real-time file status updates
+5. Download of safe files
+6. File deletion
+
+This file should pass antivirus scanning as safe.
+
+Creation date: 2025
+Project: Unified File Gateway 
